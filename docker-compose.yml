@@ -1,0 +1,55 @@
+version: "3"
+services:
+  Main:
+    image: php:7.2.1-apache
+    networks:
+      - backend
+    volumes:
+      - ./Main/:/var/www/html
+    ports: 
+      - 80:80
+
+  Account:
+    image: php:7.2.1-apache
+    networks:
+      - backend
+    volumes:
+      - ./Account/:/var/www/html
+    ports: 
+      - 8081:80
+
+  Product:
+    image: php:7.2.1-apache
+    networks:
+      - backend
+    volumes:
+      - ./Product/:/var/www/html
+    ports: 
+      - 8082:80
+
+  CartAndOrder:
+    image: php:7.2.1-apache
+    networks:
+      - backend
+    volumes:
+      - ./CartAndOrder/:/var/www/html
+    ports: 
+      - 8083:80
+
+  MySQL:
+    image: mysql:5.7.21
+    networks:
+      - backend
+    ports: 
+      - 3306:3306
+
+networks:
+  backend:
+
+
+
+
+
+
+
+    

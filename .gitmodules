@@ -1,0 +1,12 @@
+[submodule "CartAndOrder"]
+	path = CartAndOrder
+	url = git@github.com:jackai/MicroServiceShoppingCart-CartAndOrder.git
+[submodule "Account"]
+	path = Account
+	url = git@github.com:jackai/MicroServiceShoppingCart-Account.git
+[submodule "Product"]
+	path = Product
+	url = git@github.com:jackai/MicroServiceShoppingCart-Product.git
+[submodule "Main"]
+	path = Main
+	url = git@github.com:jackai/MicroServiceShoppingCart-Main.git

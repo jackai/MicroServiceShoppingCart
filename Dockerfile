@@ -21,9 +21,10 @@ RUN apt-get -qq update && apt-get install -y \
     apache2 \
     libapache2-mod-php7.1 \
     # php
-    php-mongodb \
-    php-xdebug \
     php7.1 \
+    php-mysql \
+    php7.1-mysql \
+    php-xdebug \
     php7.1-cli \
     php7.1-common \
     php7.1-curl \

@@ -1,7 +1,7 @@
 version: "3"
 services:
   Main:
-    image: laijackai/php7.1-apache:latest
+    image: php7.1-apache:test
     networks:
       - backend
     volumes:
@@ -10,7 +10,7 @@ services:
       - 80:80
 
   Account:
-    image: laijackai/php7.1-apache:latest
+    image: php7.1-apache:test
     networks:
       - backend
     volumes:
@@ -19,7 +19,7 @@ services:
       - 8081:80
 
   Product:
-    image: laijackai/php7.1-apache:latest
+    image: php7.1-apache:test
     networks:
       - backend
     volumes:
@@ -28,7 +28,7 @@ services:
       - 8082:80
 
   CartAndOrder:
-    image: laijackai/php7.1-apache:latest
+    image: php7.1-apache:test
     networks:
       - backend
     volumes:
@@ -42,10 +42,10 @@ services:
       - ./data/db:/var/lib/mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: somewordpress
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpress
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: microservice
+      MYSQL_USER: user
+      MYSQL_PASSWORD: user
     networks:
       - backend
     ports: 
@@ -56,7 +56,7 @@ services:
     networks:
       - backend
     environment:
-      PMA_HOST: mysql
+      PMA_HOST: MySQL
       PMA_PORT: 3306
     ports:
       - '8084:80'

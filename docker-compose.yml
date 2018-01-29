@@ -1,7 +1,7 @@
 version: "3"
 services:
   Main:
-    image: php7.1-apache:test
+    image: laijackai/php7.1-apache:latest
     networks:
       - backend
     volumes:
@@ -10,7 +10,7 @@ services:
       - 80:80
 
   Account:
-    image: php7.1-apache:test
+    image: laijackai/php7.1-apache:latest
     networks:
       - backend
     volumes:
@@ -19,7 +19,7 @@ services:
       - 8081:80
 
   Product:
-    image: php7.1-apache:test
+    image: laijackai/php7.1-apache:latest
     networks:
       - backend
     volumes:
@@ -28,7 +28,7 @@ services:
       - 8082:80
 
   CartAndOrder:
-    image: php7.1-apache:test
+    image: laijackai/php7.1-apache:latest
     networks:
       - backend
     volumes:

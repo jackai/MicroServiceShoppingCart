@@ -1,15 +1,15 @@
 apt-get install git -y
 
-cp -r deployKey/* ~/.ssh
-cp -r deployKey/* /root/.ssh
-chmod -R 400 ~/.ssh/*
-chmod -R 400 /root/.ssh/*
-chown -R jacklai:jacklai ~/.ssh/
+sudo cp -r deployKey/* ~/.ssh
+sudo cp -r deployKey/* /root/.ssh
+sudo chmod 400 ~/.ssh/*
+sudo chmod 400 /root/.ssh/*
+sudo chown -R jacklai:jacklai ~/.ssh/
 
 # 初始化 submodule
-git submodule init
-git submodule update
-chown -R jacklai:jacklai *
+sudo git submodule init
+sudo git submodule update
+sudo chown -R jacklai:jacklai *
 
 sudo apt-get update
 sudo apt-get install -y \

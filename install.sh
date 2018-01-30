@@ -1,7 +1,9 @@
 apt-get install git -y
 
 cp -r deployKey/* ~/.ssh
-chmod -R 644 ~/.ssh/*
+cp -r deployKey/* /root/.ssh
+chmod -R 400 ~/.ssh/*
+chmod -R 400 /root/.ssh/*
 chown -R jacklai:jacklai ~/.ssh/
 
 # 初始化 submodule
